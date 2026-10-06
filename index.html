@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Queens — belleza, moda y estilo en un solo lugar." />
+  <title>Queens | Belleza · Moda · Tu esencia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== BARRA SUPERIOR ===== -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>🚚 Envíos a todo el país</span>
+      <span>·</span>
+      <span>Compras seguras</span>
+      <span>·</span>
+      <span>Atención personalizada</span>
+      <span class="topbar-spacer"></span>
+      <span>Mi cuenta ♡</span>
+    </div>
+  </div>
+
+  <!-- ===== HEADER / ENCABEZADO ===== -->
+  <header class="header">
+    <div class="container header-main">
+      <a class="brand" href="#inicio" aria-label="Queens inicio">
+        <img src="assets/logo.png" alt="Queens — Belleza, Moda, Tu esencia" />
+      </a>
+
+      <!-- ===== BUSCADOR ===== -->
+      <div class="search-wrap">
+        <label class="sr-only" for="searchInput">Buscar productos</label>
+        <input id="searchInput" type="search" placeholder="Buscar productos, marcas, categorías..." autocomplete="off" />
+        <button id="searchBtn" class="icon-btn" aria-label="Buscar">⌕</button>
+      </div>
+
+      <!-- ===== ACCIONES DEL HEADER ===== -->
+      <div class="header-actions">
+        <button class="icon-btn ghost" aria-label="Favoritos">♡</button>
+        <button id="cartBtn" class="cart-btn" aria-label="Abrir carrito">
+          🛍️ <span>Carrito</span>
+          <b id="cartCount">0</b>
+        </button>
+      </div>
+    </div>
+
+    <!-- ===== MENÚ DE NAVEGACIÓN ===== -->
+    <nav class="nav" aria-label="Categorías">
+      <div class="container nav-inner" id="categoryNav">
+        <button class="nav-link active" data-filter="all">Inicio</button>
+        <button class="nav-link" data-filter="maquillaje">Maquillaje</button>
+        <button class="nav-link" data-filter="skincare">Cuidado de la piel</button>
+        <button class="nav-link" data-filter="ropa">Ropa</button>
+        <button class="nav-link" data-filter="lenceria">Lencería</button>
+        <button class="nav-link" data-filter="cabello">Cabello</button>
+        <button class="nav-link" data-filter="alhajas">Alhajas</button>
+        <button class="nav-link offer" data-filter="ofertas">Ofertas</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <!-- ===== HERO / CARRUSEL PRINCIPAL ===== -->
+    <section class="hero-section container">
+      <div class="hero-slider" id="heroSlider">
+        <article class="hero-slide active">
+          <div class="hero-copy">
+            <p class="eyebrow">Belleza que te acompaña</p>
+            <h1>Sé la mejor<br/>versión de ti</h1>
+            <p>Descubre belleza, moda y detalles que celebran tu estilo. Selecciones pensadas para sentirte increíble.</p>
+            <button class="btn btn-dark" data-scroll-products>Ver colección <span>→</span></button>
+          </div>
+          <div class="hero-art hero-art-one" aria-hidden="true">
+            <div class="hero-glow"></div>
+            <div class="hero-bottle"></div>
+            <div class="hero-flower f1"></div><div class="hero-flower f2"></div>
+            <div class="hero-ring"></div>
+          </div>
+        </article>
+        <article class="hero-slide">
+          <div class="hero-copy">
+            <p class="eyebrow">Nueva temporada</p>
+            <h1>Tu estilo,<br/>tu momento</h1>
+            <p>Prendas, lencería y accesorios para elevar tus básicos con una estética suave y sofisticada.</p>
+            <button class="btn btn-dark" data-filter-trigger="ropa">Descubrir moda <span>→</span></button>
+          </div>
+          <div class="hero-art hero-art-two" aria-hidden="true">
+            <div class="fashion-card"></div>
+            <div class="strap s1"></div><div class="strap s2"></div>
+            <div class="sparkle">✦</div>
+          </div>
+        </article>
+        <article class="hero-slide">
+          <div class="hero-copy">
+            <p class="eyebrow">Ritual Queens</p>
+            <h1>Cuida de ti,<br/>todos los días</h1>
+            <p>Texturas delicadas, aromas suaves y fórmulas para convertir tu rutina en un pequeño ritual.</p>
+            <button class="btn btn-dark" data-filter-trigger="skincare">Ver skincare <span>→</span></button>
+          </div>
+          <div class="hero-art hero-art-three" aria-hidden="true">
+            <div class="jar"></div><div class="tube"></div><div class="dropper"></div>
+            <div class="leaf l1"></div><div class="leaf l2"></div>
+          </div>
+        </article>
+        <button class="hero-arrow hero-prev" aria-label="Anterior">‹</button>
+        <button class="hero-arrow hero-next" aria-label="Siguiente">›</button>
+        <div class="hero-dots" id="heroDots" aria-label="Cambiar portada">
+          <button class="dot active" data-slide="0"></button>
+          <button class="dot" data-slide="1"></button>
+          <button class="dot" data-slide="2"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CATEGORÍAS DESTACADAS ===== -->
+    <section class="category-section container">
+      <div class="category-grid">
+        <button class="category-card" data-filter-trigger="maquillaje"><span>💄</span><strong>Maquillaje</strong></button>
+        <button class="category-card" data-filter-trigger="skincare"><span>✨</span><strong>Cuidado de la piel</strong></button>
+        <button class="category-card" data-filter-trigger="ropa"><span>👗</span><strong>Ropa</strong></button>
+        <button class="category-card" data-filter-trigger="lenceria"><span>🎀</span><strong>Lencería</strong></button>
+        <button class="category-card" data-filter-trigger="cabello"><span>🌸</span><strong>Cabello</strong></button>
+        <button class="category-card" data-filter-trigger="alhajas"><span>💎</span><strong>Alhajas</strong></button>
+      </div>
+    </section>
+
+    <!-- ===== PRODUCTOS DESTACADOS ===== -->
+    <section class="products-section container" id="productos">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Selección Queens</p>
+          <h2>Productos destacados</h2>
+        </div>
+        <button class="text-btn" id="clearFilters">Ver todos <span>→</span></button>
+      </div>
+      <div class="active-filter" id="activeFilter" hidden></div>
+      <div class="product-grid" id="productGrid"></div>
+      <div class="empty-state" id="emptyState" hidden>
+        <div class="empty-icon">♡</div>
+        <h3>No encontramos ese producto</h3>
+        <p>Probá con otra palabra o explorá una categoría.</p>
+      </div>
+    </section>
+
+    <!-- ===== BANNER DE CONFIANZA ===== -->
+    <section class="trust-strip container">
+      <div><span>🚚</span><p><strong>Envíos a todo el país</strong><small>Seguimiento incluido</small></p></div>
+      <div><span>🔒</span><p><strong>Compra protegida</strong><small>Datos cifrados y seguros</small></p></div>
+      <div><span>💌</span><p><strong>Soporte personalizado</strong><small>Te ayudamos a elegir</small></p></div>
+      <div><span>↺</span><p><strong>Cambios simples</strong><small>Hasta 30 días</small></p></div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-logo" src="assets/logo.png" alt="Queens" />
+        <p>Belleza, moda y tu esencia.<br/>Todo en un solo lugar.</p>
+      </div>
+      <div>
+        <h4>Queens</h4>
+        <a href="#productos">Productos</a>
+        <a href="#inicio">Nuestra esencia</a>
+        <a href="#inicio">Contacto</a>
+      </div>
+      <div>
+        <h4>Ayuda</h4>
+        <a href="#inicio">Envíos</a>
+        <a href="#inicio">Cambios y devoluciones</a>
+        <a href="#inicio">Preguntas frecuentes</a>
+      </div>
+      <div>
+        <h4>Newsletter</h4>
+        <p>Recibí novedades y lanzamientos.</p>
+        <div class="newsletter"><input type="email" placeholder="Tu email" /><button class="btn btn-dark">Unirme</button></div>
+      </div>
+    </div>
+    <div class="container footer-bottom">© 2026 Queens · Demo de tienda online</div>
+  </footer>
+
+  <!-- ===== PANEL LATERAL DEL CARRITO ===== -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras">
+    <div class="drawer-header">
+      <div><p class="eyebrow">Tu selección</p><h3>Carrito <span id="drawerCount">0</span></h3></div>
+      <button class="icon-btn" id="closeCart" aria-label="Cerrar carrito">×</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty">
+      <div class="empty-icon">🛍️</div>
+      <h4>Tu carrito está vacío</h4>
+      <p>Agregá tus favoritos y prepará tu próxima compra.</p>
+    </div>
+    <div class="drawer-footer">
+      <div class="subtotal"><span>Subtotal</span><strong id="subtotal">$0,00</strong></div>
+      <p class="drawer-note">Envío calculado al finalizar. Demo sin pasarela de pago.</p>
+      <button class="btn btn-dark full" id="checkoutBtn">Finalizar compra</button>
+    </div>
+  </aside>
+
+  <!-- ===== MODAL DE PRODUCTO ===== -->
+  <div class="modal" id="productModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
