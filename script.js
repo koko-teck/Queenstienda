@@ -3,23 +3,1033 @@
    ETIQUETAS: PRODUCTOS · BUSCADOR · CARRUSEL · FILTROS · CARRITO · MODAL
    ========================================================= */
 
-// ===== DATOS DE PRODUCTOS (ficticios para PREVIEW) =====
+// ===== CATÁLOGO REAL · 6 CATEGORÍAS · 60 PRODUCTOS =====
+// Las imágenes se conservan dentro de sus carpetas originales en /assets.
+// Para cambiar una foto, editá únicamente el campo `image` del producto.
 const products = [
-  {id:1, name:'Labial Velvet Matte', brand:'Queens Beauty', category:'maquillaje', price:12990, oldPrice:14990, rating:'★★★★★', reviews:124, badge:'Más vendido', desc:'Labial cremoso de acabado aterciopelado, cómodo y de larga duración.', variants:[['Rosa Nude','#d99aa2'],['Berry','#9d5669'],['Malva','#b88592']], art:'lipstick'},
-  {id:2, name:'Crema Facial Hidratante', brand:'Pure Skin', category:'skincare', price:18990, rating:'★★★★★', reviews:98, badge:'Favorito', desc:'Crema ligera con sensación fresca para una rutina suave y luminosa.', variants:[['Lavanda','#c7b2cf'],['Rosa','#e7b9c0'],['Marfil','#e8ddd1']], art:'skincare'},
-  {id:3, name:'Vestido Casual Chic', brand:'QueenStyle', category:'ropa', price:29990, rating:'★★★★★', reviews:76, desc:'Vestido midi liviano con caída elegante y detalle de cintura.', variants:[['Rosa pastel','#e6aebc'],['Lila','#c9b5d1'],['Crema','#ead8c8']], art:'dress'},
-  {id:4, name:'Conjunto de Encaje', brand:'Lingerie Queen', category:'lenceria', price:21990, rating:'★★★★★', reviews:62, badge:'Nuevo', desc:'Conjunto delicado con encaje floral y tiras regulables.', variants:[['Rosa','#e7a9b7'],['Negro','#4a4147'],['Marfil','#e8ddd2']], art:'lingerie'},
-  {id:5, name:'Kit de Cuidado Capilar', brand:'Hair Queen', category:'cabello', price:16990, rating:'★★★★★', reviews:89, desc:'Ritual completo para hidratar, suavizar y dar brillo al cabello.', variants:[['Lila','#bda8cc'],['Rosa','#e8bcc4'],['Blanco','#ece9e8']], art:'hair'},
-  {id:6, name:'Aros Estrella', brand:'Queen Bijoux', category:'alhajas', price:11990, rating:'★★★★★', reviews:45, badge:'-20%', discount:true, desc:'Aros dorados con estrella, livianos y fáciles de combinar.', variants:[['Dorado','#d8ad5f'],['Plateado','#c5c5c5']], art:'earrings'},
-  {id:7, name:'Paleta Soft Bloom', brand:'Queens Beauty', category:'maquillaje', price:23990, rating:'★★★★★', reviews:51, desc:'Nueve tonos románticos para looks suaves, de día o de noche.', variants:[['Blush','#d7a8b3'],['Mauve','#a48798']], art:'palette'},
-  {id:8, name:'Sérum Glow 30 ml', brand:'Pure Skin', category:'skincare', price:21490, rating:'★★★★★', reviews:71, badge:'Top', desc:'Sérum facial de textura sedosa pensado para aportar apariencia luminosa.', variants:[['Rosa',' #e6bdc6'],['Ámbar','#d7b172']], art:'serum'},
-  {id:9, name:'Cárdigan Cozy', brand:'QueenStyle', category:'ropa', price:27990, rating:'★★★★☆', reviews:34, desc:'Tejido suave y liviano, ideal para sumar una capa cálida y femenina.', variants:[['Rosa','#dcaebb'],['Crema','#ddcfb7'],['Lila','#bdaabd']], art:'cardigan'},
-  {id:10, name:'Pijama Satin Dreams', brand:'Lingerie Queen', category:'lenceria', price:24990, rating:'★★★★★', reviews:29, desc:'Pijama satinado de tacto suave con terminaciones delicadas.', variants:[['Champagne','#dfcdb4'],['Rosa','#e5abb9']], art:'pajamas'},
-  {id:11, name:'Cepillo Ionic Rose', brand:'Hair Queen', category:'cabello', price:14990, rating:'★★★★☆', reviews:40, desc:'Cepillo de styling con cuerpo ergonómico y estética minimalista.', variants:[['Rosa','#dbaab7'],['Lavanda','#bda9c7']], art:'brush'},
-  {id:12, name:'Collar Initial Q', brand:'Queen Bijoux', category:'alhajas', price:15990, rating:'★★★★★', reviews:52, desc:'Collar delicado con dije de inicial para llevar tu esencia contigo.', variants:[['Dorado','#d8ad5f'],['Plateado','#bdbdbd']], art:'necklace'}
+  {
+    "id": 1,
+    "name": "Set de Labiales Cremosos",
+    "brand": "Queens Beauty",
+    "category": "maquillaje",
+    "price": 12990,
+    "badge": "Destacado",
+    "desc": "Set de Labiales Cremosos. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Maquillaje/01_Maquillaje.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 2,
+    "name": "Paleta de Sombras Nude",
+    "brand": "Queens Beauty",
+    "category": "maquillaje",
+    "price": 23990,
+    "badge": "Nuevo",
+    "desc": "Paleta de Sombras Nude. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Maquillaje/02_Maquillaje.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 3,
+    "name": "Base de Maquillaje Líquida",
+    "brand": "Queens Beauty",
+    "category": "maquillaje",
+    "price": 18990,
+    "badge": "",
+    "desc": "Base de Maquillaje Líquida. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Maquillaje/03_Maquillaje.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 4,
+    "name": "Set de Brochas para Maquillaje",
+    "brand": "Queens Beauty",
+    "category": "maquillaje",
+    "price": 24990,
+    "badge": "",
+    "desc": "Set de Brochas para Maquillaje. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Maquillaje/04_Maquillaje.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 5,
+    "name": "Set de Maquillaje de Ojos",
+    "brand": "Queens Beauty",
+    "category": "maquillaje",
+    "price": 13990,
+    "badge": "Favorito",
+    "desc": "Set de Maquillaje de Ojos. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Maquillaje/05_Maquillaje.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 6,
+    "name": "Máscara de Pestañas",
+    "brand": "Queens Beauty",
+    "category": "maquillaje",
+    "price": 11990,
+    "badge": "",
+    "desc": "Máscara de Pestañas. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Maquillaje/06_Maquillaje.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 7,
+    "name": "Rubor Compacto Rosado",
+    "brand": "Queens Beauty",
+    "category": "maquillaje",
+    "price": 15990,
+    "badge": "",
+    "desc": "Rubor Compacto Rosado. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Maquillaje/07_Maquillaje.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 8,
+    "name": "Delineadores de Ojos Negros",
+    "brand": "Queens Beauty",
+    "category": "maquillaje",
+    "price": 10990,
+    "badge": "",
+    "desc": "Delineadores de Ojos Negros. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Maquillaje/08_Maquillaje.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 9,
+    "name": "Brillos Labiales",
+    "brand": "Queens Beauty",
+    "category": "maquillaje",
+    "price": 12990,
+    "badge": "",
+    "desc": "Brillos Labiales. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Maquillaje/09_Maquillaje.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 10,
+    "name": "Polvo Compacto Natural",
+    "brand": "Queens Beauty",
+    "category": "maquillaje",
+    "price": 17990,
+    "badge": "",
+    "desc": "Polvo Compacto Natural. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Maquillaje/10_Maquillaje.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 11,
+    "name": "Conjunto de Encaje Rojo",
+    "brand": "Queens Lingerie",
+    "category": "lenceria",
+    "price": 26990,
+    "badge": "Destacado",
+    "desc": "Conjunto de Encaje Rojo. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Lenceria_Femenina/01_Lenceria_Femenina.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 12,
+    "name": "Body de Encaje Negro",
+    "brand": "Queens Lingerie",
+    "category": "lenceria",
+    "price": 28990,
+    "badge": "Nuevo",
+    "desc": "Body de Encaje Negro. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Lenceria_Femenina/02_Lenceria_Femenina.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 13,
+    "name": "Conjunto Satinado Rosa",
+    "brand": "Queens Lingerie",
+    "category": "lenceria",
+    "price": 23990,
+    "badge": "",
+    "desc": "Conjunto Satinado Rosa. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Lenceria_Femenina/03_Lenceria_Femenina.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 14,
+    "name": "Conjunto de Encaje Azul",
+    "brand": "Queens Lingerie",
+    "category": "lenceria",
+    "price": 23990,
+    "badge": "",
+    "desc": "Conjunto de Encaje Azul. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Lenceria_Femenina/04_Lenceria_Femenina.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 15,
+    "name": "Panty de Encaje Negro",
+    "brand": "Queens Lingerie",
+    "category": "lenceria",
+    "price": 18990,
+    "badge": "Favorito",
+    "desc": "Panty de Encaje Negro. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Lenceria_Femenina/05_Lenceria_Femenina.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 16,
+    "name": "Conjunto de Encaje Violeta",
+    "brand": "Queens Lingerie",
+    "category": "lenceria",
+    "price": 24990,
+    "badge": "",
+    "desc": "Conjunto de Encaje Violeta. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Lenceria_Femenina/06_Lenceria_Femenina.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 17,
+    "name": "Conjunto de Encaje Blanco",
+    "brand": "Queens Lingerie",
+    "category": "lenceria",
+    "price": 22990,
+    "badge": "",
+    "desc": "Conjunto de Encaje Blanco. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Lenceria_Femenina/07_Lenceria_Femenina.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 18,
+    "name": "Baby Doll Rojo",
+    "brand": "Queens Lingerie",
+    "category": "lenceria",
+    "price": 29990,
+    "badge": "",
+    "desc": "Baby Doll Rojo. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Lenceria_Femenina/08_Lenceria_Femenina.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 19,
+    "name": "Bralette de Encaje Negro",
+    "brand": "Queens Lingerie",
+    "category": "lenceria",
+    "price": 21990,
+    "badge": "",
+    "desc": "Bralette de Encaje Negro. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Lenceria_Femenina/09_Lenceria_Femenina.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 20,
+    "name": "Bata Satinada Rosa",
+    "brand": "Queens Lingerie",
+    "category": "lenceria",
+    "price": 24990,
+    "badge": "",
+    "desc": "Bata Satinada Rosa. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Lenceria_Femenina/10_Lenceria_Femenina.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 21,
+    "name": "Shampoo y Acondicionador Reparador",
+    "brand": "Queens Hair",
+    "category": "cabello",
+    "price": 14990,
+    "badge": "Destacado",
+    "desc": "Shampoo y Acondicionador Reparador. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Cuidado_del_Cabello/01_Cuidado_del_Cabello.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 22,
+    "name": "Mascarilla Nutritiva",
+    "brand": "Queens Hair",
+    "category": "cabello",
+    "price": 13990,
+    "badge": "Nuevo",
+    "desc": "Mascarilla Nutritiva. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Cuidado_del_Cabello/02_Cuidado_del_Cabello.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 23,
+    "name": "Aceite Capilar",
+    "brand": "Queens Hair",
+    "category": "cabello",
+    "price": 11990,
+    "badge": "",
+    "desc": "Aceite Capilar. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Cuidado_del_Cabello/03_Cuidado_del_Cabello.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 24,
+    "name": "Shampoo y Acondicionador Hidratante",
+    "brand": "Queens Hair",
+    "category": "cabello",
+    "price": 16990,
+    "badge": "",
+    "desc": "Shampoo y Acondicionador Hidratante. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Cuidado_del_Cabello/04_Cuidado_del_Cabello.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 25,
+    "name": "Cepillo Desenredante",
+    "brand": "Queens Hair",
+    "category": "cabello",
+    "price": 6990,
+    "badge": "Favorito",
+    "desc": "Cepillo Desenredante. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Cuidado_del_Cabello/05_Cuidado_del_Cabello.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 26,
+    "name": "Planchita de Cabello",
+    "brand": "Queens Hair",
+    "category": "cabello",
+    "price": 18990,
+    "badge": "",
+    "desc": "Planchita de Cabello. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Cuidado_del_Cabello/06_Cuidado_del_Cabello.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 27,
+    "name": "Tratamiento Capilar Sin Enjuague",
+    "brand": "Queens Hair",
+    "category": "cabello",
+    "price": 12990,
+    "badge": "",
+    "desc": "Tratamiento Capilar Sin Enjuague. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Cuidado_del_Cabello/07_Cuidado_del_Cabello.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 28,
+    "name": "Sérums Capilares",
+    "brand": "Queens Hair",
+    "category": "cabello",
+    "price": 15990,
+    "badge": "",
+    "desc": "Sérums Capilares. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Cuidado_del_Cabello/08_Cuidado_del_Cabello.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 29,
+    "name": "Mascarilla Capilar Hidratante",
+    "brand": "Queens Hair",
+    "category": "cabello",
+    "price": 14990,
+    "badge": "",
+    "desc": "Mascarilla Capilar Hidratante. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Cuidado_del_Cabello/09_Cuidado_del_Cabello.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 30,
+    "name": "Shampoo Reparador",
+    "brand": "Queens Hair",
+    "category": "cabello",
+    "price": 18990,
+    "badge": "",
+    "desc": "Shampoo Reparador. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Cuidado_del_Cabello/10_Cuidado_del_Cabello.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 31,
+    "name": "Aros Argolla Dorados",
+    "brand": "Queens Bijoux",
+    "category": "alhajas",
+    "price": 11990,
+    "badge": "Destacado",
+    "desc": "Aros Argolla Dorados. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Alhajas/01_Alhajas.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 32,
+    "name": "Collar Corazón",
+    "brand": "Queens Bijoux",
+    "category": "alhajas",
+    "price": 15990,
+    "badge": "Nuevo",
+    "desc": "Collar Corazón. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Alhajas/02_Alhajas.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 33,
+    "name": "Pulsera con Dijes",
+    "brand": "Queens Bijoux",
+    "category": "alhajas",
+    "price": 13990,
+    "badge": "",
+    "desc": "Pulsera con Dijes. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Alhajas/03_Alhajas.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 34,
+    "name": "Aros Colgantes",
+    "brand": "Queens Bijoux",
+    "category": "alhajas",
+    "price": 18990,
+    "badge": "",
+    "desc": "Aros Colgantes. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Alhajas/04_Alhajas.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 35,
+    "name": "Anillo Corazón",
+    "brand": "Queens Bijoux",
+    "category": "alhajas",
+    "price": 9990,
+    "badge": "Favorito",
+    "desc": "Anillo Corazón. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Alhajas/05_Alhajas.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 36,
+    "name": "Reloj Dorado",
+    "brand": "Queens Bijoux",
+    "category": "alhajas",
+    "price": 32990,
+    "badge": "",
+    "desc": "Reloj Dorado. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Alhajas/06_Alhajas.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 37,
+    "name": "Aros con Perla",
+    "brand": "Queens Bijoux",
+    "category": "alhajas",
+    "price": 14990,
+    "badge": "",
+    "desc": "Aros con Perla. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Alhajas/07_Alhajas.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 38,
+    "name": "Collar de Capas",
+    "brand": "Queens Bijoux",
+    "category": "alhajas",
+    "price": 17990,
+    "badge": "",
+    "desc": "Collar de Capas. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Alhajas/08_Alhajas.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 39,
+    "name": "Pulsera Dorada",
+    "brand": "Queens Bijoux",
+    "category": "alhajas",
+    "price": 19990,
+    "badge": "",
+    "desc": "Pulsera Dorada. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Alhajas/09_Alhajas.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 40,
+    "name": "Set de Aros y Anillos",
+    "brand": "Queens Bijoux",
+    "category": "alhajas",
+    "price": 16990,
+    "badge": "",
+    "desc": "Set de Aros y Anillos. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Alhajas/10_Alhajas.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 41,
+    "name": "Blazer Rosa",
+    "brand": "QueenStyle",
+    "category": "ropa",
+    "price": 49990,
+    "badge": "Destacado",
+    "desc": "Blazer Rosa. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Ropa_Femenina/01_Ropa_Femenina.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 42,
+    "name": "Musculosa Blanca",
+    "brand": "QueenStyle",
+    "category": "ropa",
+    "price": 25990,
+    "badge": "Nuevo",
+    "desc": "Musculosa Blanca. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Ropa_Femenina/02_Ropa_Femenina.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 43,
+    "name": "Vestido Negro Ajustado",
+    "brand": "QueenStyle",
+    "category": "ropa",
+    "price": 31990,
+    "badge": "",
+    "desc": "Vestido Negro Ajustado. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Ropa_Femenina/03_Ropa_Femenina.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 44,
+    "name": "Sweater Beige",
+    "brand": "QueenStyle",
+    "category": "ropa",
+    "price": 28990,
+    "badge": "",
+    "desc": "Sweater Beige. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Ropa_Femenina/04_Ropa_Femenina.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 45,
+    "name": "Jean Azul Wide Leg",
+    "brand": "QueenStyle",
+    "category": "ropa",
+    "price": 35990,
+    "badge": "Favorito",
+    "desc": "Jean Azul Wide Leg. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Ropa_Femenina/05_Ropa_Femenina.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 46,
+    "name": "Vestido Floral",
+    "brand": "QueenStyle",
+    "category": "ropa",
+    "price": 39990,
+    "badge": "",
+    "desc": "Vestido Floral. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Ropa_Femenina/06_Ropa_Femenina.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 47,
+    "name": "Campera de Cuero Negra",
+    "brand": "QueenStyle",
+    "category": "ropa",
+    "price": 45990,
+    "badge": "",
+    "desc": "Campera de Cuero Negra. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Ropa_Femenina/07_Ropa_Femenina.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 48,
+    "name": "Sweater Rayado",
+    "brand": "QueenStyle",
+    "category": "ropa",
+    "price": 28990,
+    "badge": "",
+    "desc": "Sweater Rayado. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Ropa_Femenina/08_Ropa_Femenina.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 49,
+    "name": "Camisa Blanca",
+    "brand": "QueenStyle",
+    "category": "ropa",
+    "price": 27990,
+    "badge": "",
+    "desc": "Camisa Blanca. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Ropa_Femenina/09_Ropa_Femenina.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 50,
+    "name": "Pantalón Sastrero Negro",
+    "brand": "QueenStyle",
+    "category": "ropa",
+    "price": 42990,
+    "badge": "",
+    "desc": "Pantalón Sastrero Negro. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Ropa_Femenina/10_Ropa_Femenina.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 51,
+    "name": "Limpiador Facial Hidratante",
+    "brand": "Queens Skin",
+    "category": "skincare",
+    "price": 12990,
+    "badge": "Destacado",
+    "desc": "Limpiador Facial Hidratante. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Cuidado_de_la_Piel/01_Cuidado_de_la_Piel.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 52,
+    "name": "Sérum Facial",
+    "brand": "Queens Skin",
+    "category": "skincare",
+    "price": 18990,
+    "badge": "Nuevo",
+    "desc": "Sérum Facial. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Cuidado_de_la_Piel/02_Cuidado_de_la_Piel.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 53,
+    "name": "Crema Facial en Gel",
+    "brand": "Queens Skin",
+    "category": "skincare",
+    "price": 16990,
+    "badge": "",
+    "desc": "Crema Facial en Gel. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Cuidado_de_la_Piel/03_Cuidado_de_la_Piel.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 54,
+    "name": "Protector Solar SPF 50+",
+    "brand": "Queens Skin",
+    "category": "skincare",
+    "price": 22990,
+    "badge": "",
+    "desc": "Protector Solar SPF 50+. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Cuidado_de_la_Piel/04_Cuidado_de_la_Piel.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 55,
+    "name": "Mascarillas Faciales",
+    "brand": "Queens Skin",
+    "category": "skincare",
+    "price": 9990,
+    "badge": "Favorito",
+    "desc": "Mascarillas Faciales. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Cuidado_de_la_Piel/05_Cuidado_de_la_Piel.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 56,
+    "name": "Agua Micelar",
+    "brand": "Queens Skin",
+    "category": "skincare",
+    "price": 11990,
+    "badge": "",
+    "desc": "Agua Micelar. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Cuidado_de_la_Piel/06_Cuidado_de_la_Piel.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 57,
+    "name": "Crema Facial Hidratante",
+    "brand": "Queens Skin",
+    "category": "skincare",
+    "price": 14990,
+    "badge": "",
+    "desc": "Crema Facial Hidratante. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Cuidado_de_la_Piel/07_Cuidado_de_la_Piel.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 58,
+    "name": "Exfoliante Facial",
+    "brand": "Queens Skin",
+    "category": "skincare",
+    "price": 9990,
+    "badge": "",
+    "desc": "Exfoliante Facial. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Cuidado_de_la_Piel/08_Cuidado_de_la_Piel.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 59,
+    "name": "Contorno de Ojos",
+    "brand": "Queens Skin",
+    "category": "skincare",
+    "price": 19990,
+    "badge": "",
+    "desc": "Contorno de Ojos. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Cuidado_de_la_Piel/09_Cuidado_de_la_Piel.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  },
+  {
+    "id": 60,
+    "name": "Rodillo y Gua Sha Facial",
+    "brand": "Queens Skin",
+    "category": "skincare",
+    "price": 15990,
+    "badge": "",
+    "desc": "Rodillo y Gua Sha Facial. Foto real del producto incluida en el catálogo Queens.",
+    "image": "assets/Cuidado_de_la_Piel/10_Cuidado_de_la_Piel.jpg",
+    "variants": [
+      [
+        "Único",
+        ""
+      ]
+    ],
+    "discount": false
+  }
 ];
 
-let cart = JSON.parse(localStorage.getItem('queens-cart') || '[]');
+let cart = JSON.parse(localStorage.getItem('queens-cart-v2') || '[]');
 let currentFilter = 'all';
 let currentQuery = '';
 let heroIndex = 0;
@@ -47,6 +1057,12 @@ function svgArt(type, variant='#e6b0bb', compact=false){
 
 function money(v){ return new Intl.NumberFormat('es-AR',{style:'currency',currency:'ARS',maximumFractionDigits:0}).format(v); }
 
+// ===== FOTOS REALES =====
+function productImage(p, compact=false){
+  const sizeClass = compact ? ' compact' : '';
+  return `<img class=\"catalog-photo${sizeClass}\" src=\"${p.image}\" alt=\"${p.name}\" loading=\"lazy\" decoding=\"async\" />`;
+}
+
 // ===== RENDER PRODUCTOS =====
 function renderProducts(){
   const grid=document.getElementById('productGrid');
@@ -70,20 +1086,15 @@ function renderProducts(){
 }
 
 function productCard(p){
-  const first=p.variants[0];
   return `<article class="product-card" data-product-id="${p.id}">
     <div class="product-image">
       ${p.badge?`<span class="badge">${p.badge}</span>`:''}
       <button class="quick" data-detail="${p.id}" aria-label="Ver ${p.name}">♡</button>
-      <div class="product-art" id="art-${p.id}">${svgArt(p.art, first[1])}</div>
+      ${productImage(p)}
     </div>
     <div class="product-meta">
       <div><h3>${p.name}</h3><div class="brand-name">${p.brand}</div></div>
-      <div class="rating">${p.rating} <span style="color:#9b9095">(${p.reviews})</span></div>
       <div class="price">${money(p.price)}</div>
-      <div class="swatches" aria-label="Colores disponibles">
-        ${p.variants.map((v,i)=>`<button class="swatch ${i===0?'active':''}" title="${v[0]}" aria-label="${v[0]}" data-variant-index="${i}" data-product="${p.id}" style="background:${v[1]}"></button>`).join('')}
-      </div>
       <div class="card-actions"><button class="add-btn" data-add="${p.id}">Agregar al carrito</button><button class="detail-btn" data-detail="${p.id}" aria-label="Ver detalle">+</button></div>
     </div>
   </article>`;
@@ -92,14 +1103,6 @@ function productCard(p){
 function bindProductEvents(){
   document.querySelectorAll('[data-add]').forEach(btn=>btn.addEventListener('click',()=>addToCart(Number(btn.dataset.add),0)));
   document.querySelectorAll('[data-detail]').forEach(btn=>btn.addEventListener('click',()=>openModal(Number(btn.dataset.detail),0)));
-  document.querySelectorAll('.swatch').forEach(btn=>btn.addEventListener('click',e=>{
-    e.stopPropagation();
-    const id=Number(btn.dataset.product), idx=Number(btn.dataset.variantIndex); const p=products.find(x=>x.id===id);
-    const card=document.querySelector(`.product-card[data-product-id="${id}"]`);
-    card?.querySelectorAll('.swatch').forEach(s=>s.classList.remove('active')); btn.classList.add('active');
-    const art=card?.querySelector('.product-art'); if(art) art.innerHTML=svgArt(p.art,p.variants[idx][1]);
-    card?.querySelector('.product-image')?.setAttribute('data-color',p.variants[idx][0]);
-  }));
 }
 
 // ===== FILTROS Y BUSCADOR =====
@@ -133,13 +1136,13 @@ function addToCart(id, variantIndex=0){
 }
 function changeQty(key,delta){const item=cart.find(i=>i.key===key); if(!item)return; item.qty+=delta; if(item.qty<=0)cart=cart.filter(i=>i.key!==key); persistCart();renderCart();}
 function removeItem(key){cart=cart.filter(i=>i.key!==key);persistCart();renderCart();}
-function persistCart(){localStorage.setItem('queens-cart',JSON.stringify(cart));}
+function persistCart(){localStorage.setItem('queens-cart-v2',JSON.stringify(cart));}
 function cartCount(){return cart.reduce((n,i)=>n+i.qty,0)}
 function renderCart(){
   const items=document.getElementById('cartItems'), empty=document.getElementById('cartEmpty');
   const count=cartCount(); document.getElementById('cartCount').textContent=count;document.getElementById('drawerCount').textContent=count;
   empty.hidden=count>0;
-  items.innerHTML=cart.map(item=>{const p=products.find(x=>x.id===item.id); return `<div class="cart-row"><div class="cart-thumb">${svgArt(p.art,item.color,true)}</div><div class="cart-info"><h4>${p.name}</h4><p>${item.variant}</p><div class="qty"><button data-qty="${item.key}" data-delta="-1">−</button><strong>${item.qty}</strong><button data-qty="${item.key}" data-delta="1">+</button></div><button class="remove" data-remove="${item.key}">Eliminar</button></div><div class="cart-price">${money(p.price*item.qty)}</div></div>`}).join('');
+  items.innerHTML=cart.map(item=>{const p=products.find(x=>x.id===item.id); if(!p)return ''; return `<div class="cart-row"><div class="cart-thumb">${productImage(p,true)}</div><div class="cart-info"><h4>${p.name}</h4><p>${item.variant}</p><div class="qty"><button data-qty="${item.key}" data-delta="-1">−</button><strong>${item.qty}</strong><button data-qty="${item.key}" data-delta="1">+</button></div><button class="remove" data-remove="${item.key}">Eliminar</button></div><div class="cart-price">${money(p.price*item.qty)}</div></div>`}).join('');
   items.querySelectorAll('[data-qty]').forEach(b=>b.addEventListener('click',()=>changeQty(b.dataset.qty,Number(b.dataset.delta))));
   items.querySelectorAll('[data-remove]').forEach(b=>b.addEventListener('click',()=>removeItem(b.dataset.remove)));
   const total=cart.reduce((sum,i)=>{const p=products.find(x=>x.id===i.id);return sum+p.price*i.qty},0);document.getElementById('subtotal').textContent=money(total);
@@ -156,7 +1159,7 @@ function openModal(id,activeVariant=0){
   modal.classList.add('open'); modal.setAttribute('aria-hidden','false');
   function draw(idx){
     const v=p.variants[idx];
-    document.getElementById('modalContent').innerHTML=`<div class="modal-grid"><div class="modal-art">${svgArt(p.art,v[1])}</div><div class="modal-info"><p class="eyebrow">${p.brand}</p><h2>${p.name}</h2><div class="rating">${p.rating} <span style="color:#9b9095">(${p.reviews})</span></div><p class="modal-desc">${p.desc}</p><div class="modal-price">${money(p.price)}</div><div class="choice-label">Color</div><div class="variant-row">${p.variants.map((x,i)=>`<button class="variant-btn ${i===idx?'active':''}" data-var="${i}">${x[0]}</button>`).join('')}</div><button class="btn btn-dark full" id="modalAdd">Agregar al carrito</button></div></div>`;
+    document.getElementById('modalContent').innerHTML=`<div class="modal-grid"><div class="modal-art">${productImage(p)}</div><div class="modal-info"><p class="eyebrow">${p.brand}</p><h2>${p.name}</h2><p class="modal-desc">${p.desc}</p><div class="modal-price">${money(p.price)}</div>${p.variants.length>1?`<div class="choice-label">Variantes</div><div class="variant-row">${p.variants.map((x,i)=>`<button class="variant-btn ${i===idx?'active':''}" data-var="${i}">${x[0]}</button>`).join('')}</div>`:''}<button class="btn btn-dark full" id="modalAdd">Agregar al carrito</button></div></div>`;
     document.querySelectorAll('[data-var]').forEach(b=>b.addEventListener('click',()=>draw(Number(b.dataset.var)))); document.getElementById('modalAdd').addEventListener('click',()=>{addToCart(p.id,idx); closeModal();});
   }
   draw(activeVariant);
